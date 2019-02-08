@@ -163,26 +163,26 @@ fn main() {
 
 	let mut output =
 "
-struct Class {
-	id: u8,
-	name: &'static str,
-	subclasses: &'static [Subclass],
+pub struct Class {
+	pub id: u8,
+	pub name: &'static str,
+	pub subclasses: &'static [Subclass],
 }
 
-struct Subclass {
-	id: u8,
-	name: &'static str,
+pub struct Subclass {
+	pub id: u8,
+	pub name: &'static str,
 }
 
-struct Vendor {
-	id: u16,
-	name: &'static str,
-	devices: &'static [Device],
+pub struct Vendor {
+	pub id: u16,
+	pub name: &'static str,
+	pub devices: &'static [Device],
 }
 
-struct Device {
-	id: u16,
-	name: &'static str,
+pub struct Device {
+	pub id: u16,
+	pub name: &'static str,
 }
 
 ".to_string();
