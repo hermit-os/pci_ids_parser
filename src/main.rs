@@ -187,7 +187,7 @@ struct Device {
 
 ".to_string();
 
-	output += &format!("static CLASSES: &[Class] = &[\n");
+	output += &format!("pub static CLASSES: &[Class] = &[\n");
 	for c in &classes {
 		output += &format!("\tClass {{ id: 0x{:02X}, name: \"{}\", subclasses: &[\n", c.id, c.name);
 
@@ -200,7 +200,7 @@ struct Device {
 
 	output += &format!("];\n\n");
 
-	output += &format!("static VENDORS: &[Vendor] = &[\n");
+	output += &format!("pub static VENDORS: &[Vendor] = &[\n");
 	for v in &vendors {
 		output += &format!("\tVendor {{ id: 0x{:04X}, name: \"{}\", devices: &[\n", v.id, sanitize(&v.name));
 
